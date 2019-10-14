@@ -1,6 +1,6 @@
 import { RECEIVE_SWIM } from '../../actions/needsActions';
 import { merge } from 'lodash';
-const needsReducer = (state = {swim: false}, action) => {
+const swimReducer = (state = {swim: false}, action) => {
     Object.freeze(state);
 
     switch (action.type) {
@@ -11,4 +11,4 @@ const needsReducer = (state = {swim: false}, action) => {
     }
 };
 
-export default needsReducer;
+export default swimReducer;

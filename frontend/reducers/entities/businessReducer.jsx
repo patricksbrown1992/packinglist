@@ -1,6 +1,6 @@
 import { RECEIVE_BUSINESS} from '../../actions/needsActions';
 import { merge } from 'lodash';
-const needsReducer = (state = { business: false }, action) => {
+const businessReducer = (state = { business: false }, action) => {
     Object.freeze(state);
 
     switch (action.type) {
@@ -11,4 +11,4 @@ const needsReducer = (state = { business: false }, action) => {
     }
 };
 
-export default needsReducer;
+export default businessReducer;
