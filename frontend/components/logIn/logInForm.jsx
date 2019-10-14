@@ -24,9 +24,9 @@ class LogInForm extends React.Component {
         this.props.clearErrors();
     }
 
-    // componentWillUnmount(){
-    //     this.props.clearErrors();  
-    // }
+    componentDidMount(){
+        this.props.clearErrors();  
+    }
 
     render() {
 
@@ -65,8 +65,6 @@ class LogInForm extends React.Component {
                         </form>
                     </div>
                     <div className="log-in-bottom">
-
-                        <h3>Remember me for 30 days</h3>
                         <h3>Don't have an account?</h3>
                         <div className='redirect-to-login-signup'>
                             <Link to='/signup'>Create account</Link>

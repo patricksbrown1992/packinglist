@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 const splashHeader = () => (
 
     <div className='splash-nav'>
-        <div>
-            <h1>Packing List Creator</h1>
+        <div className='title-div'>
+            <h1>Patrick's Packing List Creator</h1>
         </div>
         <div className="features-div">
             <ul>
