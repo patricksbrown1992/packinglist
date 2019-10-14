@@ -104,7 +104,7 @@ class QuestionForm extends React.Component {
 
 
     render() {
-        debugger
+
         if( Number.isInteger(this.state.num_days) ){
             return (
     

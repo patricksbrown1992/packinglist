@@ -32,11 +32,11 @@ class NeedsForm extends React.Component {
     }
     handleClick(e){
         if (e.target.classList[0] == 'uncrossed'){
-            debugger
+            // debugger
             e.target.classList.remove('uncrossed');
             e.target.classList.add('crossed');
         } else {
-            debugger
+            // debugger
             e.target.classList.remove('crossed');
             e.target.classList.add('uncrossed');
         }
