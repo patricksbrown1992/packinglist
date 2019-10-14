@@ -2,14 +2,20 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
 // import { Authorized, ProtectedRoute } from '../util/routeUtil';
-
+import SplashForm from './splash/splashForm';
 
 // import Modal from './modal/modal'
 
 const App = () => (
-    <div>
-        <h1>Packing List Creator</h1>
-    </div>
+
+    <>
+
+        <Switch>
+            
+            <Route exact path='/' component={SplashForm} />
+      
+        </Switch>
+    </>
 
 
 )
