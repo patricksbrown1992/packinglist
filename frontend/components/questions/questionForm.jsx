@@ -27,10 +27,10 @@ class QuestionForm extends React.Component {
 
 
     render() {
+
         return (
 
-            <div className="logout">
-                {/* <i onClick={this.props.closeModal} className="fas fa-times fa-2x"></i> */}
+            <div className="question-form">
                 <br />
                 <br />
 
