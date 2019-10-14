@@ -1,11 +1,11 @@
 import { RECEIVE_DAY} from '../../actions/needsActions';
 import { merge } from 'lodash';
-const daysReducer = (state = {days: 0}, action) => {
+const daysReducer = (state =  0, action) => {
     Object.freeze(state);
 
     switch (action.type) {
         case RECEIVE_DAY:
-            return merge({}, state, { days: action.ele });
+            return action.ele;
         default:
             return state;
     }

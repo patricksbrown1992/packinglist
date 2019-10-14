@@ -3,7 +3,7 @@ export const RECEIVE_SWIM = 'RECEIVE_SWIM';
 export const RECEIVE_BUSINESS = 'RECEIVE_BUSINESS';
 export const RECEIVE_INTERNATIONAL = 'RECEIVE_INTERNATIONAL';
 export const RECEIVE_COLD = 'RECEIVE_COLD';
-export const RECEIVE_MONEY = 'RECEIVE_MONEY';
+
 
 export const receiveDay = (ele) => ({
     type: RECEIVE_DAY,
@@ -29,7 +29,4 @@ export const receiveCold = (ele) => ({
     ele
 });
 
-export const receiveMoney = (ele) => ({
-    type: RECEIVE_MONEY,
-    ele
-});
+
