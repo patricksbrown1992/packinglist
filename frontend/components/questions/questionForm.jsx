@@ -104,24 +104,52 @@ class QuestionForm extends React.Component {
 
 
     render() {
+        debugger
+        if( Number.isInteger(this.state.num_days) ){
+            return (
+    
+                <div className="question-form">
+                    <button className='logout-button' onClick={this.handleSubmit} type='submit'>Sign Out {this.props.user.email}</button>
+                    <div className="question-form-panel">
+                        <h1>Number of Days</h1>
+                        <input type="text" value={this.state.num_days} onChange={this.handleChangeDays()} placeholder='number of days'/>
+                        <button className='red' onClick={this.handleChangeSwim}>Swim?</button>
+                        <button className='red' onClick={this.handleChangeBusiness}>Business?</button>
+                        <button className='red' onClick={this.handleChangeInternational}>International?</button>
+                        <button className='red' onClick={this.handleChangeCold}>Cold?</button>
+                        <button className='red' onClick={this.handleChangeHot}>Hot?</button>
+    
+                        <Link to='/needs'>Submit</Link>
+                    </div>
+    
+                            
+                            
+                </div>
+            )
 
-        return (
+        } else {
+            return (
 
-            <div className="question-form">
+                <div className="question-form">
+                    <button className='logout-button' onClick={this.handleSubmit} type='submit'>Sign Out {this.props.user.email}</button>
+                    <div className="question-form-panel">
+                        <h1>Number of Days</h1>
+                        <input type="text" onChange={this.handleChangeDays()} placeholder='number of days' />
+                        <h3>Must enter number to continue</h3>
+                        <button className='red' onClick={this.handleChangeSwim}>Swim?</button>
+                        <button className='red' onClick={this.handleChangeBusiness}>Business?</button>
+                        <button className='red' onClick={this.handleChangeInternational}>International?</button>
+                        <button className='red' onClick={this.handleChangeCold}>Cold?</button>
+                        <button className='red' onClick={this.handleChangeHot}>Hot?</button>
 
-                <button onClick={this.handleSubmit} type='submit'>Sign Out {this.props.user.email}</button>
-                <input type="text" value={this.state.num_days} onChange={this.handleChangeDays()} placeholder='number of days'/>
-                <button className='red' onClick={this.handleChangeSwim}>Swim?</button>
-                <button className='red' onClick={this.handleChangeBusiness}>Business?</button>
-                <button className='red' onClick={this.handleChangeInternational}>International?</button>
-                <button className='red' onClick={this.handleChangeCold}>Cold?</button>
-                <button className='red' onClick={this.handleChangeHot}>Hot?</button>
-
-                <Link to='/needs'>Submit</Link>
                         
-                        
-            </div>
-        )
+                    </div>
+
+
+
+                </div>
+            )
+        }
     }
          
 };

@@ -5,15 +5,23 @@
     z-index: 1;
     height: 100%;
     width: 100%;
-    background-image: image-url('toy_story.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-color: #F7A992;
     align-items: center;
 }
+.logout-button {
 
+    background-color: #82A0C2;
+    color: mintcream;
+    cursor: pointer;
+    outline: none;
+    
+    padding: 1% 1%;
+}
 .question-form button {
-    width: 150px;
+    width: 25%;
+    cursor: pointer;
+    outline: none;
+    border-radius: 10%;
 }
 
 .red {
@@ -23,4 +31,35 @@
 .green {
     background-color: green;
 }
+.question-form a {
+    color: #4C364D;
+    width: 25%;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 2% 2%;
+    border: 2px solid #4C364D;
+    text-align: center;
+}
 
+
+.question-form input {
+    outline: none;
+    background-color: #F7A992;
+    color: #4C364D;
+    padding: 1% 1%;
+    border-radius: 5%;
+    width: 40%;
+    height: 4%;
+}
+
+.question-form-panel{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    z-index: 2;
+    height: 85%;
+    width: 45%;
+    background-color: #FDF0C4;
+    align-items: center;
+    border: 2px solid red;
+}
