@@ -37,7 +37,7 @@ class QuestionForm extends React.Component {
         return (
 
             <div className="question-form">
-                {/* <button onClick={this.handleSubmit} type='submit'>Sign Out {this.props.user.email}</button> */}
+                <button onClick={this.handleSubmit} type='submit'>Sign Out {this.props.user.email}</button>
                 {/* <button onClick={this.handleChangeBusiness()}>Business?</button> */}
       
                 <input onChange={this.handleChangeBusiness} id='2' type="checkbox" checked={this.state.business} />
