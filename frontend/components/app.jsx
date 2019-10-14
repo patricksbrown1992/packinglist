@@ -6,6 +6,7 @@ import SplashForm from './splash/splashForm';
 import SignUpForm from './signUp/signUpContainer';
 import LogInForm from './logIn/logInContainer';
 import QuestionForm from './questions/questionContainer';
+import NeedsForm from './needs/needsContainer';
 // import Modal from './modal/modal'
 
 const App = () => (
@@ -18,7 +19,7 @@ const App = () => (
             <Authorized exact path='/signup' component={SignUpForm} />
             <Authorized exact path='/login' component={LogInForm} />
             <ProtectedRoute path='/questions' component={QuestionForm} />
-
+            <ProtectedRoute path='/needs' component={NeedsForm} />
         </Switch>
     </>
 

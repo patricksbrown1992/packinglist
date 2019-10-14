@@ -10,7 +10,7 @@
     height: 130px;
     width: 100%;
 
-    background-color: #FEC240;
+    background-color: #FDF0CA;
 }
 .title-div h1 {
     font-weight: 600;
@@ -38,7 +38,7 @@ html {
 
 .splash-body h1,
 h2 {
-    color: #2f375B;
+    color: #4C364D;
 }
 
 .featuresForm h1 {
@@ -73,13 +73,13 @@ h2 {
 
 .splash-right a {
     // background-color: white;
-    color: #DE4B43;
+    color: #F7A992;
     padding: 3.5% 6.5%;
     font-size: 16px;
     font-weight: bold;
     width: 40%;
     text-decoration: underline;
-    border: 2px solid #2f375B;
+    border: 2px solid #4C364D;
     text-align: center;
     cursor: pointer;
 }
@@ -117,8 +117,8 @@ h2 {
 
 
 .login-button a:hover {
-    border: 2px solid #98C4D1;
-    color: #98C4D1;
+    border: 2px solid #82A0C2;
+    color: #82A0C2;
     cursor: pointer;
 }
 
@@ -147,12 +147,12 @@ h2 {
     align-items: center;
     text-decoration: none;
     font-family: Soleil, Helvetica, Arial, sans-serif;
-    color: #DE4B43;
+    color: #F7A992;
 }
 
 
 .signup-button a:hover {
-    color: #98C4D1;
+    color: #82A0C2;
     cursor: pointer;
 }
 
@@ -176,14 +176,14 @@ h2 {
 }
 
 .login-button a {
-    color: #DE4B43;
+    color: #F7A992;
     text-decoration: none;
     padding-bottom: 20%;
     display: flex;
     width: 100%;
     padding-top: 20%;
     border-radius: 4px;
-    border: 2px solid #DE4B43;
+    border: 2px solid #F7A992;
     padding-right: 55%;
     padding-left: 55%;
     line-height: 10px;

@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     width: 40%;
-    border: 2px solid #DE4B43;
+    border: 2px solid #F7A992;
     height: 85%;
     z-index: 2;
 }
@@ -26,7 +26,7 @@
 .sign-up-top h1,
 h3 {
 
-    color: #2F375B;
+    color: #4C364D;
 }
 
 .sign-up-middle {
@@ -51,7 +51,7 @@ h3 {
 }
 
 .sign-up-bottom h3 {
-    color: #2F375B;
+    color: #4C364D;
     font-weight: 600;
     font-size: 22px;
 }
@@ -84,7 +84,7 @@ h3 {
 .sign-up-form .enter-username button:hover {
     color: honeydew;
     cursor: pointer;
-    background-color: #98C4D1;
+    background-color: #82A0C2;
     outline: none;
 }
 .sign-up-inputs {
@@ -109,7 +109,7 @@ h3 {
 }
 
 .enter-username button {
-    background-color: #2F375B;
+    background-color: #4C364D;
     width: 65%;
     line-height: 375%;
     border-radius: 12px;
@@ -125,24 +125,24 @@ h3 {
     outline: none;
     width: 85%;
     height: 40px;
-    background-color: #98C4D1;
+    background-color: #82A0C2;
     border-radius: 10px;
     border: 1px solid #e6e6e6;
     font-size: 16px;
-    color: #2F375B;
+    color: #4C364D;
 
 }
 
 
 .redirect-to-login-signup a {
-    color: #2F375B;
+    color: #4C364D;
     font-weight: 600;
     font-size: 18px;
     // margin-bottom: -200px;
 }
 
 .redirect-to-login-signup a:hover {
-    color: #2F375B;
+    color: #4C364D;
     cursor: pointer;
 }
 
@@ -161,7 +161,7 @@ h3 {
 }
 
 .demo-button button {
-    background-color: #2F375B;
+    background-color: #4C364D;
     width: 45%;
     line-height: 250%;
     border-radius: 12px;
@@ -173,6 +173,6 @@ h3 {
 .demo-button button:hover {
     color: honeydew;
     cursor: pointer;
-    background-color: #98C4D1;
+    background-color: #82A0C2;
     outline: none;
 }

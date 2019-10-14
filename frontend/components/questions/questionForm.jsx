@@ -6,17 +6,30 @@ class QuestionForm extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = { business: false, 'swim': false };
+        this.state = { 
+            business: false, 
+            swim: false, 
+            rainy: false, 
+            cold: false, 
+            hot: false, 
+            snowy: false, 
+            international: false, 
+            new_money: false,
+            num_days: null,
+            camping: false
+        };
         this.handleChangeBusiness = this.handleChangeBusiness.bind(this);
         this.handleChangeSwim = this.handleChangeSwim.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChangeBusiness(e) {
+    handleChangeBusiness() {
         // e.preventDefault()
-        e.preventDefault()
-        
-        return this.setState({ business: e.target.checked});
+
+        return (e) => {
+            this.setState({ business: e.target.checked});
+        };
+        // return this.setState({ business: e.target.checked});
     
     }
     handleChangeSwim(e) {
