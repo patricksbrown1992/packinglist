@@ -20,6 +20,7 @@ class QuestionForm extends React.Component {
         this.handleChangeDays = this.handleChangeDays.bind(this);
         this.handleChangeInternational = this.handleChangeInternational.bind(this);
         this.handleChangeCold = this.handleChangeCold.bind(this);
+        this.handleChangeHot = this.handleChangeHot.bind(this);
     }
 
     handleChangeBusiness(e) {
@@ -46,8 +47,8 @@ class QuestionForm extends React.Component {
             e.target.classList.add('green');
             this.setState({ swim: !this.state.swim }, () => this.props.receiveSwim(this.state.swim));
         }
-
     }
+
     handleChangeInternational(e) {
         if (e.target.classList[0] == 'green') {
             e.target.classList.remove('green');
@@ -60,8 +61,8 @@ class QuestionForm extends React.Component {
             this.setState({ international: !this.state.international }, () => this.props.receiveInternational(this.state.international));
         }
     }
+
     handleChangeCold(e) {
-        // debugger
         if (e.target.classList[0] == 'green'){
             e.target.classList.remove('green');
             e.target.classList.add('red');
@@ -72,6 +73,19 @@ class QuestionForm extends React.Component {
             this.setState({ cold: !this.state.cold }, () => this.props.receiveCold(this.state.cold));
         }
         
+    }
+
+    handleChangeHot(e) {
+        if (e.target.classList[0] == 'green') {
+            e.target.classList.remove('green');
+            e.target.classList.add('red');
+            this.setState({ hot: !this.state.hot }, () => this.props.receiveHot(this.state.hot));
+        } else {
+            e.target.classList.remove('red');
+            e.target.classList.add('green');
+            this.setState({ hot: !this.state.hot }, () => this.props.receiveHot(this.state.hot));
+        }
+
     }
 
     handleSubmit(e) {
@@ -90,16 +104,19 @@ class QuestionForm extends React.Component {
 
 
     render() {
-        debugger
+
         return (
 
             <div className="question-form">
+
                 <button onClick={this.handleSubmit} type='submit'>Sign Out {this.props.user.email}</button>
                 <input type="text" value={this.state.num_days} onChange={this.handleChangeDays()} placeholder='number of days'/>
                 <button className='red' onClick={this.handleChangeSwim}>Swim?</button>
                 <button className='red' onClick={this.handleChangeBusiness}>Business?</button>
                 <button className='red' onClick={this.handleChangeInternational}>International?</button>
                 <button className='red' onClick={this.handleChangeCold}>Cold?</button>
+                <button className='red' onClick={this.handleChangeHot}>Hot?</button>
+
                 <Link to='/needs'>Submit</Link>
                         
                         
