@@ -7,18 +7,14 @@
     height: 100%;
     width: 100%;
     background-color: #f7A992;
-    // background-image: image-url('toy_story.png');
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    // background-size: 100% 100%;
-    // align-items: center;
+
 }
 
 .needs-form h1 {
     font-weight: 600;
     font-size: 30px;
     color: #4C364D;
-
+    
 }
 
 .two-lists {
@@ -53,4 +49,9 @@
 
 .needs-outline li {
     color: #82A0C2;
+    cursor: pointer;
+}
+
+.crossed {
+    text-decoration: line-through;
 }

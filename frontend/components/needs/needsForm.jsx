@@ -19,16 +19,26 @@ class NeedsForm extends React.Component {
             camping: false
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
     handleSubmit(e) {
         e.preventDefault();
         this.props.logout();
-
     }
+    handleClick(e){
+        if (e.target.classList[0] == 'uncrossed'){
+            debugger
+            e.target.classList.remove('uncrossed');
+            e.target.classList.add('crossed');
+        } else {
+            debugger
+            e.target.classList.remove('crossed');
+            e.target.classList.add('uncrossed');
+        }
+    }
+
+
     
-
-
-
     render() {
         // debugger
         return (
@@ -40,12 +50,12 @@ class NeedsForm extends React.Component {
 
                     <ul>
                         <h1>Carry on</h1>
-                        <li>Headphones</li>
-                        <li>Pillow</li>
-                        <li>Glasses/Contacts</li>
-                        <li>Phone</li>
-                        <li>Charger</li>
-                        <li>ID</li>
+                        <li  onClick={this.handleClick} className = "uncrossed">Headphones</li>
+                        <li className="uncrossed">Pillow</li>
+                        <li className="uncrossed">Glasses/Contacts</li>
+                        <li className="uncrossed">Phone</li>
+                        <li className="uncrossed">Charger</li>
+                        <li className="uncrossed">ID</li>
                         
 
                     </ul>
