@@ -1,6 +1,7 @@
 .question-form {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     z-index: 1;
     height: 100%;
     width: 100%;
@@ -8,4 +9,10 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    align-items: center;
 }
+
+.question-form button {
+    width: 150px;
+}
+
