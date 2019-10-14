@@ -5,6 +5,7 @@ import { clearErrors, logout } from '../../actions/sessionActions';
 const msp = state => ({
     errors: state.errors,
     user: state.entities.user[state.session.id],
+    needs: Object.values(state.entities.needs)
 });
 
 const mdp = dispatch => ({

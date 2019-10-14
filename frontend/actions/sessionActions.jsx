@@ -5,6 +5,7 @@ export const REMOVE_USER = 'REMOVE_USER';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 
+
 const receiveUser = (user) => ({
     type: RECEIVE_USER,
     user
@@ -12,6 +13,7 @@ const receiveUser = (user) => ({
 export const clearErrors = () => ({
     type: CLEAR_ERRORS
 });
+
 
 
 

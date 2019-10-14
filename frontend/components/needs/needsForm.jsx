@@ -40,7 +40,9 @@ class NeedsForm extends React.Component {
 
     
     render() {
-        // debugger
+        debugger
+        let num_underwear = this.props.needs[0] * 2;
+        
         return (
             <div className="needs-form">
             <h1>Here is what you need:</h1>
@@ -48,26 +50,28 @@ class NeedsForm extends React.Component {
                 <div className = 'two-lists'>
                     <div className='needs-outline'>
 
-                    <ul>
-                        <h1>Carry on</h1>
-                        <li  onClick={this.handleClick} className = "uncrossed">Headphones</li>
-                        <li className="uncrossed">Pillow</li>
-                        <li className="uncrossed">Glasses/Contacts</li>
-                        <li className="uncrossed">Phone</li>
-                        <li className="uncrossed">Charger</li>
-                        <li className="uncrossed">ID</li>
-                        
+                        <ul>
+                            <h1>Carry on</h1>
+                            <li onClick={this.handleClick} className = "uncrossed">Headphones</li>
+                            <li onClick={this.handleClick} className="uncrossed">Pillow</li>
+                            <li onClick={this.handleClick} className="uncrossed">Glasses/Contacts</li>
+                            <li onClick={this.handleClick} className="uncrossed">Phone</li>
+                            <li onClick={this.handleClick} className="uncrossed">Charger</li>
+                            <li onClick={this.handleClick} className="uncrossed">ID</li>
+                            
 
-                    </ul>
+                        </ul>
                     </div>
                     <div className='needs-outline'>
 
                         <ul>
                             <h1>Packed Bag</h1>
-                            <li>Meds</li>
-                            <li>Toiletries</li>
-                            <li>Camera</li>
-                            <li>Day Bag</li>
+                            <li onClick={this.handleClick} className="uncrossed">Meds</li>
+                            <li onClick={this.handleClick} className="uncrossed">Toiletries</li>
+                            <li onClick={this.handleClick} className="uncrossed">Camera</li>
+                            <li onClick={this.handleClick} className="uncrossed">Day Bag</li>
+                            <li onClick={this.handleClick} className="uncrossed">Scandals</li>
+                            <li onClick={this.handleClick} className="uncrossed">{num_underwear} pairs of underwear</li>
                         </ul>
                     </div>
                 </div>
