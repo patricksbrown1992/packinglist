@@ -57,7 +57,7 @@ class LogInForm extends React.Component {
 
                         {errors}
                         <br />
-                        <form onSubmit={this.handleSubmit}>
+                        <form className='enter-user-form' onSubmit={this.handleSubmit}>
                             <div className='enter-username'>
 
                                 <button type='submit'>Sign In</button>

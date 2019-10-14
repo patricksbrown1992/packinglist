@@ -18,8 +18,8 @@ class SignUpForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-
-        if (e.currentTarget.children[0].classList.value === "sign-up-continue") {
+        debugger
+        if (e.currentTarget.children[0].classList[0] == 'enter-username') {
 
             this.props.signup(this.state);
             this.setState({ email: '', password: '' });
@@ -61,7 +61,7 @@ class SignUpForm extends React.Component {
                     </div>
 
                     <div className="sign-up-middle">
-                        <form onSubmit={this.handleSubmit}>
+                        <form className='demo-form' onSubmit={this.handleSubmit}>
                             <div className="demo-button">
                                 <button type='submit'>Demo for Free</button>
                             </div>
@@ -69,16 +69,16 @@ class SignUpForm extends React.Component {
                         <br />
                         <div className="sign-up-inputs">
 
-                            <input className="sign-up-email" type="text" value={this.state.email} placeholder='Email' onChange={this.handleChange('email')} />
-                            <input className="sign-up-password" type="password" placeholder='Password' value={this.state.password} onChange={this.handleChange('password')} />
+                            <input className="sign-up-email-input" type="text" value={this.state.email} placeholder='Email' onChange={this.handleChange('email')} />
+                            <input className="sign-up-email-input" type="password" placeholder='Password' value={this.state.password} onChange={this.handleChange('password')} />
                         </div>
                         <ul>
                             <br />
                             {errors}
                             <br />
                         </ul>
-                        <form onSubmit={this.handleSubmit}>
-                            <div className='sign-up-continue'>
+                        <form className='enter-user-form' onSubmit={this.handleSubmit}>
+                            <div className='enter-username'>
 
                                 <button type='submit'>Continue</button>
                             </div>
