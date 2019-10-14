@@ -3,6 +3,7 @@ export const RECEIVE_SWIM = 'RECEIVE_SWIM';
 export const RECEIVE_BUSINESS = 'RECEIVE_BUSINESS';
 export const RECEIVE_INTERNATIONAL = 'RECEIVE_INTERNATIONAL';
 export const RECEIVE_COLD = 'RECEIVE_COLD';
+export const RECEIVE_HOT = 'RECEIVE_HOT';
 
 
 export const receiveDay = (ele) => ({
@@ -26,6 +27,10 @@ export const receiveInternational = (ele) => ({
 
 export const receiveCold = (ele) => ({
     type: RECEIVE_COLD,
+    ele
+});
+export const receiveHot = (ele) => ({
+    type: RECEIVE_HOT,
     ele
 });
 

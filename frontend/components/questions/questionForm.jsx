@@ -9,13 +9,10 @@ class QuestionForm extends React.Component {
         this.state = { 
             business: false, 
             swim: false, 
-            rainy: false, 
             cold: false, 
             hot: false, 
-            snowy: false, 
             international: false, 
             num_days: null,
-            camping: false
         };
         this.handleChangeBusiness = this.handleChangeBusiness.bind(this);
         this.handleChangeSwim = this.handleChangeSwim.bind(this);
