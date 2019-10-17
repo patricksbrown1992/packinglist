@@ -109,17 +109,25 @@ class QuestionForm extends React.Component {
             return (
     
                 <div className="question-form">
-                    <button className='logout-button' onClick={this.handleSubmit} type='submit'>Sign Out {this.props.user.email}</button>
+                    <div className='logout-button-div'>
+                        <button className='logout-button' onClick={this.handleSubmit} type='submit'>Sign Out {this.props.user.email}</button>
+                    </div>
                     <div className="question-form-panel">
-                        <h1>Number of Days</h1>
-                        <input type="text" value={this.state.num_days} onChange={this.handleChangeDays()} placeholder='number of days'/>
-                        <button className='red' onClick={this.handleChangeSwim}>Swim?</button>
-                        <button className='red' onClick={this.handleChangeBusiness}>Business?</button>
-                        <button className='red' onClick={this.handleChangeInternational}>International?</button>
-                        <button className='red' onClick={this.handleChangeCold}>Cold?</button>
-                        <button className='red' onClick={this.handleChangeHot}>Hot?</button>
-    
-                        <Link to='/needs'>Submit</Link>
+                        <div className='question-input-div'>
+                            <h1>Number of Days</h1>
+                            <input type="text" onChange={this.handleChangeDays()} placeholder='number of days' />
+                        </div>
+                        <div className='question-button-div'> 
+                            <button className='red' onClick={this.handleChangeSwim}>Swim?</button>
+                            <button className='red' onClick={this.handleChangeBusiness}>Business?</button>
+                            <button className='red' onClick={this.handleChangeInternational}>International?</button>
+                            <button className='red' onClick={this.handleChangeCold}>Cold?</button>
+                            <button className='red' onClick={this.handleChangeHot}>Hot?</button>
+                        </div>
+                        <div className='question-link-div'>
+                            <Link to='/needs'>Submit</Link>
+
+                        </div>
                     </div>
     
                             
@@ -131,17 +139,26 @@ class QuestionForm extends React.Component {
             return (
 
                 <div className="question-form">
-                    <button className='logout-button' onClick={this.handleSubmit} type='submit'>Sign Out {this.props.user.email}</button>
+                    <div className='logout-button-div'>
+                        <button className='logout-button' onClick={this.handleSubmit} type='submit'>Sign Out {this.props.user.email}</button>
+                    </div>                    
                     <div className="question-form-panel">
-                        <h1>Number of Days</h1>
-                        <input type="text" onChange={this.handleChangeDays()} placeholder='number of days' />
-                        <h3>Must enter number to continue</h3>
-                        <button className='red' onClick={this.handleChangeSwim}>Swim?</button>
-                        <button className='red' onClick={this.handleChangeBusiness}>Business?</button>
-                        <button className='red' onClick={this.handleChangeInternational}>International?</button>
-                        <button className='red' onClick={this.handleChangeCold}>Cold?</button>
-                        <button className='red' onClick={this.handleChangeHot}>Hot?</button>
+                        <div className='question-input-div'>
+                            <h1>Number of Days</h1>
+                            <input type="text" onChange={this.handleChangeDays()} placeholder='number of days' />
+                            <h3>Must enter number to continue</h3>
+                        </div>
+                        <div className='question-button-div'>
+                            <button className='red' onClick={this.handleChangeSwim}>Swim?</button>
+                            <button className='red' onClick={this.handleChangeBusiness}>Business?</button>
+                            <button className='red' onClick={this.handleChangeInternational}>International?</button>
+                            <button className='red' onClick={this.handleChangeCold}>Cold?</button>
+                            <button className='red' onClick={this.handleChangeHot}>Hot?</button>
+                        </div>
+                        <div className='question-link-div'>
+                        
 
+                        </div>
                         
                     </div>
 

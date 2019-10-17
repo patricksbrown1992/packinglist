@@ -10,7 +10,7 @@
 }
 .logout-button {
 
-    background-color: #82A0C2;
+    background-color: #F7A992;
     color: mintcream;
     cursor: pointer;
     outline: none;
@@ -18,10 +18,12 @@
     padding: 1% 1%;
 }
 .question-form button {
-    width: 25%;
+    width: 200px;
     cursor: pointer;
     outline: none;
-    border-radius: 10%;
+    font-size: 20px;
+    // border-radius: 10%;
+    border: none;
 }
 
 .red {
@@ -40,16 +42,19 @@
     border: 2px solid #4C364D;
     text-align: center;
 }
+.question-input-div h1 {
+    margin-bottom: 10px;
+}
 
-
-.question-form input {
+.question-input-div input {
     outline: none;
     background-color: #F7A992;
     color: #4C364D;
     padding: 1% 1%;
     border-radius: 5%;
     width: 40%;
-    height: 4%;
+    height: 6%;
+    margin-bottom: 10px;
 }
 
 .question-form-panel{
@@ -62,4 +67,41 @@
     background-color: #FDF0C4;
     align-items: center;
     border: 2px solid red;
+}
+
+.logout-button-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    height: 15%;
+}
+
+.question-input-div {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.question-button-div {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question-button-div button {
+    margin: 10px 0%;
+}
+
+.question-link-div {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
