@@ -126,7 +126,9 @@ class NeedsForm extends React.Component {
         return (
             <div className="needs-form">
             <h1>Here is what you need:</h1>
-                <button onClick={this.handleSubmit} type='submit'>Sign Out {this.props.user.email}</button>
+                <div className='logout-button-div'>
+                    <button className='logout-button' onClick={this.handleSubmit} type='submit'>Sign Out {this.props.user.email}</button>
+                </div>   
                 <div className = 'two-lists'>
                     <div className='needs-outline'>
 
