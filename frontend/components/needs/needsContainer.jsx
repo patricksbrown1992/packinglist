@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import NeedsForm from './needsForm';
-import { clearErrors, logout } from '../../actions/sessionActions';
+import { clearErrors, logout, getUser } from '../../actions/sessionActions';
 import {clearBusiness, clearCold, clearHot, clearInternational, clearSwim} from '../../actions/needsActions';
 
 const msp = state => ({
@@ -23,7 +23,8 @@ const mdp = dispatch => ({
     clearHot: () => dispatch(clearHot()),
     clearCold: () => dispatch(clearCold()),
     clearInternational: () => dispatch(clearInternational()),
-    clearSwim: () => dispatch(clearSwim())
+    clearSwim: () => dispatch(clearSwim()),
+    getUser: user => dispatch(getUser(user)),
 });
 
 export default connect(msp, mdp)(NeedsForm);

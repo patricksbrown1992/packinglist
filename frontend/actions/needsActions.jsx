@@ -9,34 +9,43 @@ export const CLEAR_INTERNATIONAL = 'CLEAR_INTERNATIONAL';
 export const CLEAR_SWIM = 'CLEAR_SWIM';
 export const CLEAR_HOT = 'CLEAR_HOT';
 export const CLEAR_COLD = 'CLEAR_COLD';
+import * as APIUtil from '../util/sessionAPIUtil';
 
-export const receiveDay = (ele) => ({
+const receiveDay = (ele) => {
+    return{
     type: RECEIVE_DAY,
-    ele
-});
-export const receiveSwim = (ele) => ({
+    ele: ele.days
+    }
+};
+
+const receiveSwim = (ele) => {
+
+    return {
     type: RECEIVE_SWIM,
-    ele
-});
+    ele: ele.swim 
+    }
+};
 
-export const receiveBusiness = (ele) => ({
+ const receiveBusiness = (ele) => ({
     type: RECEIVE_BUSINESS,
-    ele
+    ele: ele.business
 });
 
-export const receiveInternational = (ele) => ({
+const receiveInternational = (ele) => ({
     type: RECEIVE_INTERNATIONAL,
-    ele
+    ele: ele.international
 });
 
-export const receiveCold = (ele) => ({
+const receiveCold = (ele) => ({
     type: RECEIVE_COLD,
-    ele
+    ele: ele.cold
 });
-export const receiveHot = (ele) => ({
+const receiveHot = (ele) => {
+    return {
     type: RECEIVE_HOT,
-    ele
-});
+    ele: ele.hot
+    }
+};
 
 export const clearHot = () => ({
     type: CLEAR_HOT
@@ -53,3 +62,25 @@ export const clearBusiness = () => ({
 export const clearSwim = () => ({
     type: CLEAR_SWIM
 });
+
+export const updateHot = (user) => dispatch => (
+    APIUtil.updateUser(user).then(user => (dispatch(receiveHot(user))))
+);
+
+export const updateCold = (user) => dispatch => (
+    APIUtil.updateUser(user).then(user => (dispatch(receiveCold(user))))
+);
+export const updateBusiness = (user) => dispatch => (
+    APIUtil.updateUser(user).then(user => (dispatch(receiveBusiness(user))))
+);
+export const updateInternational = (user) => dispatch => (
+    APIUtil.updateUser(user).then(user => (dispatch(receiveInternational(user))))
+);
+export const updateSwim = (user) => dispatch => (
+    APIUtil.updateUser(user).then(user => (dispatch(receiveSwim(user))))
+);
+
+export const updateDay = (user) => dispatch => (
+    APIUtil.updateUser(user).then(user => (dispatch(receiveDay(user))))
+);
+

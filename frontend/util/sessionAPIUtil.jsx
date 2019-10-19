@@ -26,3 +26,24 @@ export const logout = () => (
         url: `api/session`
     })
 );
+
+export const updateUser = user => {
+    return $.ajax({
+        method: 'PATCH',
+        url: `api/users/${user.id}`,
+        data: {
+            user
+        }
+    });
+};
+
+export const getUser = user => {
+    debugger
+    return $.ajax({
+        method: 'GET',
+        url: `api/users/${user.id}`,
+        data: {
+            user
+        }
+    });
+};

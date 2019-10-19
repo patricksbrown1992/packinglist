@@ -24,66 +24,102 @@ class QuestionForm extends React.Component {
     }
 
     handleChangeBusiness(e) {
+        let cold = this.state.cold;
+        let hot = this.state.hot;
+        let business = !this.state.business;
+        let international = this.state.international;
+        let swim = this.state.swim;
+        let id = this.props.user.id;
+        let user = { swim, international, business, hot, cold, id };
         if (e.target.classList[0] == 'green') {
             e.target.classList.remove('green');
             e.target.classList.add('red');
-            this.setState({ business: !this.state.business }, () => this.props.receiveBusiness(this.state.business));
+            
+            this.setState({ business: !this.state.business }, () => this.props.updateBusiness(user));
         } else {
             e.target.classList.remove('red');
             e.target.classList.add('green');
-            this.setState({ business: !this.state.business }, () => this.props.receiveBusiness(this.state.business));
+            this.setState({ business: !this.state.business }, () => this.props.updateBusiness(user));
 
         }
     }
     
     handleChangeSwim(e) {
+        let cold = this.state.cold;
+        let hot = this.state.hot;
+        let business = this.state.business;
+        let international = this.state.international;
+        let swim = !this.state.swim;
+        let id = this.props.user.id;
+        let user = { swim, international, business, hot, cold, id };
         if (e.target.classList[0] == 'green') {
             e.target.classList.remove('green');
             e.target.classList.add('red');
-            this.setState({ swim: !this.state.swim }, () => this.props.receiveSwim(this.state.swim));
+            this.setState({ swim: !this.state.swim }, () => this.props.updateSwim(user));
 
         } else {
             e.target.classList.remove('red');
             e.target.classList.add('green');
-            this.setState({ swim: !this.state.swim }, () => this.props.receiveSwim(this.state.swim));
+            this.setState({ swim: !this.state.swim }, () => this.props.updateSwim(user));
         }
     }
 
     handleChangeInternational(e) {
+        let cold = this.state.cold;
+        let hot = this.state.hot;
+        let business = this.state.business;
+        let international = !this.state.international;
+        let swim = this.state.swim;
+        let id = this.props.user.id;
+        let user = {swim, international, business, hot, cold, id};
         if (e.target.classList[0] == 'green') {
             e.target.classList.remove('green');
             e.target.classList.add('red');
-            this.setState({ international: !this.state.international }, () => this.props.receiveInternational(this.state.international));
+            this.setState({ international: !this.state.international }, () => this.props.updateInternational(user));
 
         } else {
             e.target.classList.remove('red');
             e.target.classList.add('green');
-            this.setState({ international: !this.state.international }, () => this.props.receiveInternational(this.state.international));
+            this.setState({ international: !this.state.international }, () => this.props.updateInternational(user));
         }
     }
 
     handleChangeCold(e) {
+        let cold = !this.state.cold;
+        let hot = this.state.hot;
+        let business = this.state.business;
+        let international = this.state.international;
+        let swim = this.state.swim;
+        let id = this.props.user.id;
+        let user = { swim, international, business, hot, cold, id };
         if (e.target.classList[0] == 'green'){
             e.target.classList.remove('green');
             e.target.classList.add('red');
-            this.setState({ cold: !this.state.cold }, () => this.props.receiveCold(this.state.cold));
+            this.setState({ cold: !this.state.cold }, () => this.props.updateCold(user));
         } else {
             e.target.classList.remove('red');
             e.target.classList.add('green');
-            this.setState({ cold: !this.state.cold }, () => this.props.receiveCold(this.state.cold));
+            this.setState({ cold: !this.state.cold }, () => this.props.updateCold(user));
         }
         
     }
 
     handleChangeHot(e) {
+        let cold = this.state.cold;
+        let hot = !this.state.hot;
+        let business = this.state.business;
+        let international = this.state.international;
+        let swim = this.state.swim;
+        let id = this.props.user.id;
+        let user = { swim, international, business, hot, cold, id };
         if (e.target.classList[0] == 'green') {
             e.target.classList.remove('green');
             e.target.classList.add('red');
-            this.setState({ hot: !this.state.hot }, () => this.props.receiveHot(this.state.hot));
+            this.setState({ hot: !this.state.hot }, () => this.props.updateHot(user));
         } else {
             e.target.classList.remove('red');
             e.target.classList.add('green');
-            this.setState({ hot: !this.state.hot }, () => this.props.receiveHot(this.state.hot));
+            this.setState({ hot: !this.state.hot }, () => this.props.updateHot(user));
         }
 
     }
@@ -94,9 +130,15 @@ class QuestionForm extends React.Component {
     }
 
     handleChangeDays(){
-        
+        let cold = this.state.cold;
+        let hot = this.state.hot;
+        let business = this.state.business;
+        let international = this.state.international;
+        let swim = this.state.swim;
+        let id = this.props.user.id;
+
         return (e) => {
-            this.setState({ num_days: parseInt(e.target.value) },  () => this.props.receiveDay(this.state.num_days));
+            this.setState({ num_days: parseInt(e.target.value) }, () => this.props.updateDay({ swim, international, business, hot, cold, id, days: this.state.num_days}));
         };
     }
    

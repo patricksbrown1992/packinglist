@@ -9,18 +9,20 @@ class NeedsForm extends React.Component {
         this.state = {
             business: false,
             swim: false,
-            rainy: false,
             cold: false,
             hot: false,
-            snowy: false,
             international: false,
-            new_money: false,
-            num_days: null,
-            camping: false
+            days: null,
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleClick = this.handleClick.bind(this);
     }
+
+    componentDidMount(){
+        this.props.getUser(this.props.user).then(() => this.setState({business: this.props.user.business, swim: this.props.user.swim, hot: this.props.user.hot, cold: this.props.user.cold, international: this.props.user.international, days: this.props.user.days}));
+    }
+
+   
     handleSubmit(e) {
         e.preventDefault();
         this.props.clearBusiness();
@@ -53,14 +55,14 @@ class NeedsForm extends React.Component {
         let swim_items;
 
         let num;
-        if (this.props.days <= 5) {
+        if (this.state.days <= 5) {
             num = 3
         } else {
             num = 5
         }
 
      
-        if (this.props.business){
+        if (this.state.business){
            
             business_items = 
             
@@ -74,7 +76,7 @@ class NeedsForm extends React.Component {
         } else {
             business_items = ''
         }
-        if (this.props.hot){
+        if (this.state.hot){
             hot_items = 
             <ul>
                 <li onClick={this.handleClick} className="uncrossed">Sunscreen</li>
@@ -84,7 +86,7 @@ class NeedsForm extends React.Component {
             hot_items = ''
         }
 
-        if(this.props.swim){
+        if(this.state.swim){
             swim_items = 
             <ul>
                 <li onClick={this.handleClick} className="uncrossed">Swim Suit</li>
@@ -94,7 +96,7 @@ class NeedsForm extends React.Component {
             swim_items = '';
         }
 
-        if (this.props.cold){
+        if (this.state.cold){
             cold_items = 
             <ul>
                 <li onClick={this.handleClick} className="uncrossed">Jacket</li>
@@ -107,7 +109,7 @@ class NeedsForm extends React.Component {
             cold_items = '';
         }
 
-        if (this.props.international){
+        if (this.state.international){
 
             international_items = 
             <ul>
@@ -159,11 +161,11 @@ class NeedsForm extends React.Component {
                             <li onClick={this.handleClick} className="uncrossed">Deodorant</li>
                             <li onClick={this.handleClick} className="uncrossed">Camera</li>
                             <li onClick={this.handleClick} className="uncrossed">Day Bag</li>
-                            <li onClick={this.handleClick} className="uncrossed">{this.props.days + 2} pairs of underwear</li>
-                            <li onClick={this.handleClick} className="uncrossed">{this.props.days} Shirts</li>
+                            <li onClick={this.handleClick} className="uncrossed">{this.state.days + 2} pairs of underwear</li>
+                            <li onClick={this.handleClick} className="uncrossed">{this.state.days} Shirts</li>
                             <li onClick={this.handleClick} className="uncrossed">{num} pairs of jeans</li>
                             <li onClick={this.handleClick} className="uncrossed">{num} pairs of shorts</li>
-                            <li onClick={this.handleClick} className="uncrossed">{this.props.days + 2} pairs of socks</li>
+                            <li onClick={this.handleClick} className="uncrossed">{this.state.days + 2} pairs of socks</li>
                             <li onClick={this.handleClick} className="uncrossed">2 pairs of shoes</li>
                             {swim_items}
                             {cold_items}

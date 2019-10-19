@@ -6,13 +6,21 @@ export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 
 
-const receiveUser = (user) => ({
+const receiveUser = (user) => {
+    return {
     type: RECEIVE_USER,
     user
-});
+    }
+};
 export const clearErrors = () => ({
     type: CLEAR_ERRORS
 });
+
+export const getUser = user => dispatch => {
+    debugger
+    return APIUtil.getUser(user).then(user => (dispatch(receiveUser(user))))
+}
+
 
 
 
@@ -46,6 +54,7 @@ export const login = (user) => dispatch => (
 
 
 export const logout = () => dispatch => (
+    
     APIUtil.logout().then(() => dispatch(removeUser())
     )
 );

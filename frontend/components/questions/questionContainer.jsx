@@ -1,7 +1,9 @@
 import { connect } from 'react-redux';
 import QuestionForm from './questionForm';
-import { clearErrors, logout} from '../../actions/sessionActions';
-import {receiveDay, receiveSwim, receiveBusiness, receiveInternational, receiveCold, receiveHot} from '../../actions/needsActions';
+import { clearErrors, logout, } from '../../actions/sessionActions';
+import { updateHot, updateBusiness, updateCold, updateInternational, updateSwim, updateDay} from '../../actions/needsActions';
+
+
 
 const msp = state => ({
     errors: state.errors,
@@ -12,12 +14,12 @@ const mdp = dispatch => ({
 
     clearErrors: () => dispatch(clearErrors()),
     logout: () => dispatch(logout()),
-    receiveDay: ele => dispatch(receiveDay(ele)),
-    receiveSwim: ele => dispatch(receiveSwim(ele)),
-    receiveBusiness: ele => dispatch(receiveBusiness(ele)),
-    receiveInternational: ele => dispatch(receiveInternational(ele)),
-    receiveCold: ele => dispatch(receiveCold(ele)),
-    receiveHot: ele => dispatch(receiveHot(ele)),
+    updateDay: user => dispatch(updateDay(user)),
+    updateHot: user => dispatch(updateHot(user)),
+    updateCold: user => dispatch(updateCold(user)),
+    updateBusiness: user => dispatch(updateBusiness(user)),
+    updateInternational: user => dispatch(updateInternational(user)),
+    updateSwim: user => dispatch(updateSwim(user)),
 });
 
 export default connect(msp, mdp)(QuestionForm);
