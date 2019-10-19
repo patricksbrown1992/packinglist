@@ -44,10 +44,11 @@
     height: 85%;
     background-color: #FDF0C4;
     z-index: 2;
+    overflow-y: scroll;
 }
 
 .needs-outline ul {
-    overflow-y: scroll;
+    
     display: flex;
     flex-direction: column;
     width: 100%;
