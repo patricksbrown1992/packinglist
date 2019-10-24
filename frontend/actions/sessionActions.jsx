@@ -17,7 +17,7 @@ export const clearErrors = () => ({
 });
 
 export const getUser = user => dispatch => {
-    debugger
+    // debugger
     return APIUtil.getUser(user).then(user => (dispatch(receiveUser(user))))
 }
 

@@ -38,7 +38,7 @@ export const updateUser = user => {
 };
 
 export const getUser = user => {
-    debugger
+    // debugger
     return $.ajax({
         method: 'GET',
         url: `api/users/${user.id}`,
