@@ -18,7 +18,7 @@ class Api::SessionsController < ApplicationController
     @user = current_user
     if @user
       logout!
-      render json: ['You have logged out of Evernote.']
+      render json: ['You have logged out of Packing List.']
     else
       render json: ["No one is signed in"], status: 422
     end
