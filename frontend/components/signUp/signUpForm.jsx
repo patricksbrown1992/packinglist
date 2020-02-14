@@ -55,7 +55,7 @@ class SignUpForm extends React.Component {
                 <div className='sign-up-form'>
 
                     <div className="sign-up-top">
-                        <h1 className='log-in-evernote'>Packing List Creator</h1>
+                        <h1 className='log-in-packinglist'>Packing List Creator</h1>
                         <h3>Remember everything important.</h3>
 
                     </div>

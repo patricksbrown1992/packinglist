@@ -44,7 +44,7 @@ class LogInForm extends React.Component {
             <div className='outerdiv'>
                 <div className='log-in-form'>
                     <div className="log-in-top">
-                        <h1 className='log-in-evernote'>Packing List Creator</h1>
+                        <h1 className='log-in-packinglist'>Packing List Creator</h1>
                         <h3>Remember everything important.</h3>
                     </div>
 
